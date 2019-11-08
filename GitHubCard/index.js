@@ -11,6 +11,14 @@ const followersArray = [
   "kefimochi"
 ];
 
+
+const header = document.querySelector(".header");
+const calendar = document.createElement("calendar");
+calendar.classList.add("calendar");
+header.after(calendar);
+
+new GitHubCalendar(".calendar", "otterspawdesign");
+
 const getProfile = axios
   .get("https://api.github.com/users/otterspawdesign")
   .then(response => {
